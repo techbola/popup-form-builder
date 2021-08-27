@@ -13,7 +13,7 @@ let request = new XMLHttpRequest();
 // Instantiating the request object
 // request.open("GET", `http://poptin-task.test/api/forms/${formId}`);
 
-request.open("GET", `http://poptin-task.test/api/preview/form/${formId}`);
+request.open("GET", `http://popup-form-builder.herokuapp.com/api/preview/form/${formId}`);
 request.onreadystatechange = function() {
   // Check if the request is compete and was successful
   if(this.readyState === 4 && this.status === 200) {

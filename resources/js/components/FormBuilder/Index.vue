@@ -7,11 +7,11 @@
         <p>
           <input type="text" class="form-control" id="popup-script-field">
         </p>
-        <pre>
+        <div class="popup_url_block">
           <code>
             &lt;script id="poptin-script-id" src="http://popup-form-builder.herokuapp.com/popup.js?id={{ popupUrl }}" async="true"&gt;&lt;/script&gt;
           </code>
-        </pre>
+        </div>
       </div>
     </div>
 
@@ -101,3 +101,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.popup_url_block {
+  border: 1px solid #E85E5C;
+}
+</style>
