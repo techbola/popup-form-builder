@@ -10689,7 +10689,6 @@ __webpack_require__.r(__webpack_exports__);
     saveFormData: function saveFormData() {
       var _this = this;
 
-      console.log(this.bgColor);
       axios.post('/api/forms', {
         'name': 'Poptin Form',
         'data': JSON.stringify(this.formData),
@@ -53522,7 +53521,7 @@ var render = function() {
               _vm._v("        "),
               _c("code", [
                 _vm._v(
-                  '\n          <script id="poptin-script-id" src="http://poptin-task.test/popup.js?id=' +
+                  '\n          <script id="poptin-script-id" src="http://popup-form-builder.herokuapp.com/popup.js?id=' +
                     _vm._s(_vm.popupUrl) +
                     '" async="true"></script>\n        '
                 )

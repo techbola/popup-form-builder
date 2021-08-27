@@ -9,7 +9,7 @@
         </p>
         <pre>
           <code>
-            &lt;script id="poptin-script-id" src="http://poptin-task.test/popup.js?id={{ popupUrl }}" async="true"&gt;&lt;/script&gt;
+            &lt;script id="poptin-script-id" src="http://popup-form-builder.herokuapp.com/popup.js?id={{ popupUrl }}" async="true"&gt;&lt;/script&gt;
           </code>
         </pre>
       </div>
@@ -87,7 +87,6 @@ export default {
       }
     },
     saveFormData() {
-      console.log(this.bgColor)
       axios.post('/api/forms', {
         'name': 'Poptin Form',
         'data': JSON.stringify(this.formData),
