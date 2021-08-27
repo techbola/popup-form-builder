@@ -10639,9 +10639,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -53584,8 +53581,6 @@ var render = function() {
               _vm._v("Copy the code and paste it in every page above the /head")
             ]),
             _vm._v(" "),
-            _vm._m(0),
-            _vm._v(" "),
             _c("div", { staticClass: "popup_url_block" }, [
               _c("code", [
                 _vm._v(
@@ -53598,7 +53593,7 @@ var render = function() {
           ])
         ])
       : _c("div", { staticClass: "row" }, [
-          _vm._m(1),
+          _vm._m(0),
           _vm._v(" "),
           _c(
             "div",
@@ -53640,17 +53635,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "text", id: "popup-script-field" }
-      })
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

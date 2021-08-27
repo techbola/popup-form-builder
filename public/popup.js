@@ -3,10 +3,6 @@ let scriptTagSrc = scriptTag.src;
 const scriptTagSrcSplit = scriptTagSrc.split("?id=");
 let formId = scriptTagSrcSplit[1]
 
-// let textValue = ''
-// let textColor = ''
-// let bgData = ''
-
 // Creating the XMLHttpRequest object
 let request = new XMLHttpRequest();
 

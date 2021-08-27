@@ -4,12 +4,9 @@
       <div class="col-md-12 my-4">
         <p>Form Created Successfully!</p>
         <p>Copy the code and paste it in every page above the /head</p>
-        <p>
-          <input type="text" class="form-control" id="popup-script-field">
-        </p>
         <div class="popup_url_block">
           <code>
-            &lt;script id="poptin-script-id" src="http://popup-form-builder.herokuapp.com/popup.js?id={{ popupUrl }}" async="true"&gt;&lt;/script&gt;
+            &lt;script id="poptin-script-id" src="http://popup-form-builder.herokuapp.com/popup.js?id={{ popupFormId }}" async="true"&gt;&lt;/script&gt;
           </code>
         </div>
       </div>
@@ -67,7 +64,7 @@ export default {
       ],
       bgColor: '#E85E5C',
       formPopupCreated: false,
-      popupUrl: ''
+      popupFormId: ''
     }
   },
   methods: {
@@ -93,7 +90,7 @@ export default {
         'bg_color': this.bgColor
       }).then(res => {
         this.formPopupCreated = true;
-        this.popupUrl = res.data.id
+        this.popupFormId = res.data.id
       }).catch(error => {
         console.log(error)
       })
