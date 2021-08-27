@@ -10639,6 +10639,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -10650,21 +10662,21 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       formData: [{
-        type: 'star'
+        type: "star"
       }, {
-        type: 'text',
-        color: '#FFFFFF',
-        value: 'This is the default header text.'
+        type: "text",
+        color: "#FFFFFF",
+        value: "This is the default header text."
       }, {
-        type: 'input',
-        placeholder: 'Email'
+        type: "input",
+        placeholder: "Email"
       }, {
-        type: 'button',
-        value: 'Signup Now'
+        type: "button",
+        value: "Signup Now"
       }],
-      bgColor: '#E85E5C',
+      bgColor: "#E85E5C",
       formPopupCreated: false,
-      popupUrl: ''
+      popupFormId: ""
     };
   },
   methods: {
@@ -10672,27 +10684,27 @@ __webpack_require__.r(__webpack_exports__);
       this.formData = data;
     },
     updateBuilderData: function updateBuilderData(data) {
-      if (data.type === 'text') {
+      if (data.type === "text") {
         this.formData.find(function (item) {
-          if (item.type === 'text') {
+          if (item.type === "text") {
             item.color = data.data.textColor;
             item.value = data.data.textValue;
           }
         });
-      } else if (data.type === 'bg') {
+      } else if (data.type === "bg") {
         this.bgColor = data.data.bgColor;
       }
     },
     saveFormData: function saveFormData() {
       var _this = this;
 
-      axios.post('/api/forms', {
-        'name': 'Poptin Form',
-        'data': JSON.stringify(this.formData),
-        'bg_color': this.bgColor
+      axios.post("/api/forms", {
+        name: "Poptin Form",
+        data: JSON.stringify(this.formData),
+        bg_color: this.bgColor
       }).then(function (res) {
         _this.formPopupCreated = true;
-        _this.popupUrl = res.data.id;
+        _this.popupFormId = res.data.id;
       })["catch"](function (error) {
         console.log(error);
       });
@@ -15527,7 +15539,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.popup_url_block[data-v-4a8d5eff] {\n  border: 1px solid #E85E5C;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.popup_url_block[data-v-4a8d5eff] {\n    border: 1px solid #e85e5c;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -53584,9 +53596,9 @@ var render = function() {
             _c("div", { staticClass: "popup_url_block" }, [
               _c("code", [
                 _vm._v(
-                  '\n          <script id="poptin-script-id" src="http://popup-form-builder.herokuapp.com/popup.js?id=' +
-                    _vm._s(_vm.popupUrl) +
-                    '" async="true"></script>\n        '
+                  '\n                    <script id="poptin-script-id"\n                    src="https://popup-form-builder.herokuapp.com/popup.js?id=' +
+                    _vm._s(_vm.popupFormId) +
+                    '" async="true"></script>\n                '
                 )
               ])
             ])
@@ -53628,7 +53640,7 @@ var render = function() {
                 staticClass: "btn btn-primary btn-lg float-right",
                 on: { click: _vm.saveFormData }
               },
-              [_vm._v("Save")]
+              [_vm._v("\n                Save\n            ")]
             )
           ])
         ])
@@ -53642,7 +53654,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-md-12 my-4" }, [
       _c("strong", [_vm._v("** Note")]),
       _vm._v(
-        "\n      Each elements (star, text, input field, button) can be dragged to update position on the preview container\n      "
+        "\n            Each elements (star, text, input field, button) can be dragged\n            to update position on the preview container\n            "
       ),
       _c("hr")
     ])
