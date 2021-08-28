@@ -9,28 +9,8 @@
       </div>
       <div class="collapse" id="collapseFieldOptions">
         <div class="card card-body">
-          <div class="mt-2">
-            <div>
-              <a class="btn btn-light btn-block" data-toggle="collapse" href="#collapseText" role="button" aria-expanded="false" aria-controls="collapseText">
-                Text
-                <ChevronDownIcon />
-              </a>
-            </div>
-            <div class="collapse" id="collapseText">
-              <div class="card card-body">
-                <input type="text" v-model="textData.textValue" required>
-                <h6 class="mt-2">Select Color</h6>
-                <color-picker
-                  :color="textData.textColor"
-                  :sucker-hide="false"
-                  @changeColor="changeTextColor"
-                />
-                <button class="btn btn-primary btn-sm mt-2" @click="updateBuilder('text')">Update</button>
-              </div>
-            </div>
-          </div>
 
-          <div class="mt-4">
+          <div class="mt-2">
             <div>
               <a class="btn btn-light btn-block" data-toggle="collapse" href="#collapseBackground" role="button" aria-expanded="false" aria-controls="collapseBackground">
                 Background color

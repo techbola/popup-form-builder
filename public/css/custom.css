@@ -14,18 +14,13 @@
 }
 
 .popup_block {
-    position: fixed;
-    width: 420px;
-    height: 420px;
+    position: relative;
+    width: 450px;
+    height: 450px;
     border-radius: 100%;
     z-index: 100;
     animation: popupAnim 0.5s linear 2s forwards;
     transform: scale(0);
-}
-
-.popup_form {
-    width: 75%;
-    height: 100%;
 }
 
 .big-star {
@@ -35,4 +30,29 @@
 @keyframes popupAnim {
     0%   { transform: scale(0) }
     100% { transform: scale(1) }
+}
+
+.star-popup-field {
+    width: 105px;
+    height: 40px;
+}
+.text-popup-field {
+    width: 350px;
+    height: 80px;
+    min-height: 40px;
+}
+.input-popup-field {
+    width: 350px;
+    height: 40px;
+}
+.button-popup-field {
+    width: 350px;
+    height: 40px;
+}
+.info {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 350px;
+    left: 0;
 }

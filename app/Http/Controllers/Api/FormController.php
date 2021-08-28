@@ -71,9 +71,10 @@ class FormController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(FormStoreRequest $request, Form $form)
     {
-        //
+        $form->update($request->validated());
+        return response()->json($form);
     }
 
     /**

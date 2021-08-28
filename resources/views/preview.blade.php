@@ -21,27 +21,25 @@
 <div id="poptin-popup-dialog" class="popup" onclick="closeModal()">
     <div class="popup_container d-flex justify-content-center align-items-center">
         <div class="popup_block" style="background: {{ $bgColor  }}">
-            <div class="popup_form mx-auto d-flex flex-column justify-content-center align-items-center">
-                @foreach($formBuilderOrder as $item)
-                    @if($item === 'star')
-                        <div class="text-center mb-3">
-                            <i class="fas fa-star mr-2"></i>
-                            <i class="fas fa-star mr-2 big-star"></i>
-                            <i class="fas fa-star mr-2"></i>
-                        </div>
-                    @elseif($item === 'text')
-                        <h2 class="text-center mb-3" style="color: {{ $textColor }}">{{ $textValue }}</h2>
-                    @elseif($item === 'input')
-                        <input type="text" class="form-control mb-3" :placeholder="{{ $inputPlaceholder }}">
-                    @elseif($item === 'button')
-                        <button class="btn btn-dark btn-lg btn-block text-uppercase mb-3">{{ $buttonText }}</button>
-                    @endif
-                @endforeach
+            @foreach($formBuilderOrder as $item)
+                @if($item === 'star')
+                    <div class="star-popup-field" style="position: absolute;top: {{ $starYPos.'px' }};left: {{ $starXPos.'px' }};">
+                        <i class="fas fa-star mr-2"></i>
+                        <i class="fas fa-star mr-2 big-star"></i>
+                        <i class="fas fa-star mr-2"></i>
+                    </div>
+                @elseif($item === 'text')
+                    <div class="text-popup-field" style="color: {{ $textColor }};position: absolute;top: {{ $textYPos.'px !important' }};left: {{ $textXPos.'px !important' }};">{!! $textValue !!}</div>
+                @elseif($item === 'input')
+                    <input type="text" class="form-control input-popup-field" :placeholder="{{ $inputPlaceholder }}" style="position: absolute;top: {{ $inputYPos.'px' }};left: {{ $inputXPos.'px' }};">
+                @elseif($item === 'button')
+                    <button class="btn btn-dark btn-lg btn-block text-uppercase button-popup-field" style="position: absolute;top: {{ $buttonYPos.'px' }};left: {{ $buttonXPos.'px' }};">{{ $buttonText }}</button>
+                @endif
+            @endforeach
 
-                    <p>
-                        No credit card is required. No Surprises
-                    </p>
-            </div>
+                <p class="info">
+                    No credit card is required. No Surprises
+                </p>
         </div>
     </div>
 </div>

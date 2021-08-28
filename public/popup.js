@@ -8,7 +8,7 @@ let request = new XMLHttpRequest();
 
 // Instantiating the request object
 // request.open("GET", `http://poptin-task.test/api/forms/${formId}`);
-
+// https://popup-form-builder.herokuapp.com
 request.open(
     "GET",
     `https://popup-form-builder.herokuapp.com/api/preview/form/${formId}`

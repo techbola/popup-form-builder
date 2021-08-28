@@ -27,6 +27,8 @@
     },
     "dependencies": {
         "@caohenghu/vue-colorpicker": "^1.2.4",
-        "@vue-hero-icons/outline": "^1.7.2"
+        "@tinymce/tinymce-vue": "^3.2.8",
+        "@vue-hero-icons/outline": "^1.7.2",
+        "vue-draggable-resizable": "^2.3.0"
     }
 }
