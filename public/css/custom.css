@@ -1,3 +1,6 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 .popup {
     position: fixed;
     top: 0;
@@ -9,8 +12,19 @@
 }
 
 .popup_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
+    animation: popupAnim 0.5s linear 2s forwards;
+    transform: scale(0);
+}
+
+.popup_form_block {
+    width: 530px;
+    height: 530px;
+    display: flex;
 }
 
 .popup_block {
@@ -19,12 +33,18 @@
     height: 450px;
     border-radius: 100%;
     z-index: 100;
-    animation: popupAnim 0.5s linear 2s forwards;
-    transform: scale(0);
 }
 
 .big-star {
     font-size: 30px;
+}
+
+.close-icon {
+    margin-left: 40px;
+}
+.fa-times-circle {
+    font-size: 46px;
+    cursor: pointer;
 }
 
 @keyframes popupAnim {
@@ -40,14 +60,26 @@
     width: 350px;
     height: 80px;
     min-height: 40px;
+    font-family: 'Nunito', sans-serif;
 }
 .input-popup-field {
     width: 350px;
     height: 40px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding-left: 12px;
 }
 .button-popup-field {
     width: 350px;
-    height: 40px;
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
 }
 .info {
     width: 100%;
@@ -55,4 +87,6 @@
     position: absolute;
     top: 350px;
     left: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
 }

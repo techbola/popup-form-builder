@@ -29,6 +29,6 @@ function getFormPreview(data) {
 }
 
 function closeModal() {
-    let poptin_popup_dialog = document.getElementById("poptin-popup-dialog");
-    poptin_popup_dialog.style.display = "none";
+    let popupDialog = document.getElementById("popup-dialog");
+    popupDialog.style.display = "none";
 }
